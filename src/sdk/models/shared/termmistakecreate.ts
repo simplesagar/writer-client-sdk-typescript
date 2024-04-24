@@ -19,7 +19,8 @@ export type TermMistakeCreate = {
 };
 
 /** @internal */
-export const TermMistakeCreatePos$ = z.nativeEnum(TermMistakeCreatePos);
+export const TermMistakeCreatePos$: z.ZodNativeEnum<typeof TermMistakeCreatePos> =
+    z.nativeEnum(TermMistakeCreatePos);
 
 /** @internal */
 export namespace TermMistakeCreate$ {

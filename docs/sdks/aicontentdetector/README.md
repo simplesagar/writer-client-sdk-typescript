@@ -18,18 +18,18 @@ Content detector api
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 496531,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 496531,
+});
 
+async function run() {
   const contentDetectorRequest = {
     input: "<value>",
   };
   const organizationId = 592237;
   
-  const result = await sdk.aiContentDetector.detect(contentDetectorRequest, organizationId);
+  const result = await writer.aiContentDetector.detect(contentDetectorRequest, organizationId);
 
   // Handle the result
   console.log(result)

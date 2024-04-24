@@ -26,7 +26,7 @@ export type Document = {
 };
 
 /** @internal */
-export const DocumentAccess$ = z.nativeEnum(DocumentAccess);
+export const DocumentAccess$: z.ZodNativeEnum<typeof DocumentAccess> = z.nativeEnum(DocumentAccess);
 
 /** @internal */
 export namespace Document$ {

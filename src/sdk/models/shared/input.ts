@@ -24,7 +24,7 @@ export type Input = {
 };
 
 /** @internal */
-export const InputType$ = z.nativeEnum(InputType);
+export const InputType$: z.ZodNativeEnum<typeof InputType> = z.nativeEnum(InputType);
 
 /** @internal */
 export namespace Input$ {

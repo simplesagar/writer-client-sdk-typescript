@@ -15,7 +15,7 @@ export type ContentDetectorResponse = {
 };
 
 /** @internal */
-export const Label$ = z.nativeEnum(Label);
+export const Label$: z.ZodNativeEnum<typeof Label> = z.nativeEnum(Label);
 
 /** @internal */
 export namespace ContentDetectorResponse$ {

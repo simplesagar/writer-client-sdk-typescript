@@ -21,12 +21,12 @@ Create model customization
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 486589,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 486589,
+});
 
+async function run() {
   const createCustomizationRequest = {
     additionalHyperParameters: {
       numVirtualTokens: 489382,
@@ -37,7 +37,7 @@ async function run() {
   const modelId = "<value>";
   const organizationId = 638424;
   
-  const result = await sdk.modelCustomization.create(createCustomizationRequest, modelId, organizationId);
+  const result = await writer.modelCustomization.create(createCustomizationRequest, modelId, organizationId);
 
   // Handle the result
   console.log(result)
@@ -76,17 +76,17 @@ Delete Model customization
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 545907,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 545907,
+});
 
+async function run() {
   const customizationId = "<value>";
   const modelId = "<value>";
   const organizationId = 841399;
   
-  const result = await sdk.modelCustomization.delete(customizationId, modelId, organizationId);
+  const result = await writer.modelCustomization.delete(customizationId, modelId, organizationId);
 
   // Handle the result
   console.log(result)
@@ -125,17 +125,17 @@ Get model customization
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 700347,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 700347,
+});
 
+async function run() {
   const customizationId = "<value>";
   const modelId = "<value>";
   const organizationId = 90065;
   
-  const result = await sdk.modelCustomization.get(customizationId, modelId, organizationId);
+  const result = await writer.modelCustomization.get(customizationId, modelId, organizationId);
 
   // Handle the result
   console.log(result)
@@ -174,16 +174,16 @@ List model customizations
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 768578,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 768578,
+});
 
+async function run() {
   const modelId = "<value>";
   const organizationId = 99895;
   
-  const result = await sdk.modelCustomization.list(modelId, organizationId);
+  const result = await writer.modelCustomization.list(modelId, organizationId);
 
   // Handle the result
   console.log(result)

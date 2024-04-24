@@ -46,14 +46,14 @@ export type ListTeamDocumentsResponse = {
 };
 
 /** @internal */
-export const ListTeamDocumentsQueryParamSortField$ = z.nativeEnum(
-    ListTeamDocumentsQueryParamSortField
-);
+export const ListTeamDocumentsQueryParamSortField$: z.ZodNativeEnum<
+    typeof ListTeamDocumentsQueryParamSortField
+> = z.nativeEnum(ListTeamDocumentsQueryParamSortField);
 
 /** @internal */
-export const ListTeamDocumentsQueryParamSortOrder$ = z.nativeEnum(
-    ListTeamDocumentsQueryParamSortOrder
-);
+export const ListTeamDocumentsQueryParamSortOrder$: z.ZodNativeEnum<
+    typeof ListTeamDocumentsQueryParamSortOrder
+> = z.nativeEnum(ListTeamDocumentsQueryParamSortOrder);
 
 /** @internal */
 export namespace ListTeamDocumentsRequest$ {

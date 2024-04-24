@@ -22,12 +22,12 @@ Add terms
 import { Writer } from "@writerai/writer-sdk";
 import { TermCreateType, TermExampleCreateType } from "@writerai/writer-sdk/sdk/models/shared";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 551477,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 551477,
+});
 
+async function run() {
   const createTermsRequest = {
     models: [
       {
@@ -65,7 +65,7 @@ async function run() {
   const teamId = 623445;
   const organizationId = 822001;
   
-  const result = await sdk.terminology.add(createTermsRequest, teamId, organizationId);
+  const result = await writer.terminology.add(createTermsRequest, teamId, organizationId);
 
   // Handle the result
   console.log(result)
@@ -104,12 +104,12 @@ Delete terms
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 545907,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 545907,
+});
 
+async function run() {
   const teamId = 841399;
   const xRequestID = "<value>";
   const ids = [
@@ -117,7 +117,7 @@ async function run() {
   ];
   const organizationId = 557937;
   
-  const result = await sdk.terminology.delete(teamId, xRequestID, ids, organizationId);
+  const result = await writer.terminology.delete(teamId, xRequestID, ids, organizationId);
 
   // Handle the result
   console.log(result)
@@ -157,13 +157,13 @@ Find terms
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 40141,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 40141,
+});
 
-  const result = await sdk.terminology.find({
+async function run() {
+  const result = await writer.terminology.find({
     tags: [
       "<value>",
     ],
@@ -206,12 +206,12 @@ Update terms
 import { Writer } from "@writerai/writer-sdk";
 import { TermExampleCreateType, TermUpdateType } from "@writerai/writer-sdk/sdk/models/shared";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 857478,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 857478,
+});
 
+async function run() {
   const updateTermsRequest = {
     models: [
       {
@@ -251,7 +251,7 @@ async function run() {
   const xRequestID = "<value>";
   const organizationId = 708455;
   
-  const result = await sdk.terminology.update(updateTermsRequest, teamId, xRequestID, organizationId);
+  const result = await writer.terminology.update(updateTermsRequest, teamId, xRequestID, organizationId);
 
   // Handle the result
   console.log(result)

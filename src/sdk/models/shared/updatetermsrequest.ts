@@ -18,7 +18,9 @@ export type UpdateTermsRequest = {
 };
 
 /** @internal */
-export const UpdateTermsRequestFailHandling$ = z.nativeEnum(UpdateTermsRequestFailHandling);
+export const UpdateTermsRequestFailHandling$: z.ZodNativeEnum<
+    typeof UpdateTermsRequestFailHandling
+> = z.nativeEnum(UpdateTermsRequestFailHandling);
 
 /** @internal */
 export namespace UpdateTermsRequest$ {

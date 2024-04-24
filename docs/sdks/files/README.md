@@ -21,16 +21,16 @@ Delete file
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 545907,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 545907,
+});
 
+async function run() {
   const fileId = "<value>";
   const organizationId = 841399;
   
-  const result = await sdk.files.delete(fileId, organizationId);
+  const result = await writer.files.delete(fileId, organizationId);
 
   // Handle the result
   console.log(result)
@@ -68,16 +68,16 @@ Get file
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 700347,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 700347,
+});
 
+async function run() {
   const fileId = "<value>";
   const organizationId = 90065;
   
-  const result = await sdk.files.get(fileId, organizationId);
+  const result = await writer.files.get(fileId, organizationId);
 
   // Handle the result
   console.log(result)
@@ -115,15 +115,15 @@ List files
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 768578,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 768578,
+});
 
+async function run() {
   const organizationId = 99895;
   
-  const result = await sdk.files.list(organizationId);
+  const result = await writer.files.list(organizationId);
 
   // Handle the result
   console.log(result)
@@ -161,18 +161,18 @@ Upload file
 import { Writer } from "@writerai/writer-sdk";
 import { openAsBlob } from "node:fs";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 403654,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 403654,
+});
 
+async function run() {
   const uploadModelFileRequest = {
     file: await openAsBlob("./sample-file"),
   };
   const organizationId = 330343;
   
-  const result = await sdk.files.upload(uploadModelFileRequest, organizationId);
+  const result = await writer.files.upload(uploadModelFileRequest, organizationId);
 
   // Handle the result
   console.log(result)

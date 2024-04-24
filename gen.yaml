@@ -10,13 +10,15 @@ generation:
   auth:
     oAuth2ClientCredentialsEnabled: false
 typescript:
-  version: 3.4.2
+  version: 3.5.0
   additionalDependencies:
     dependencies: {}
     devDependencies: {}
     peerDependencies: {}
+  additionalPackageJSON: {}
   author: writerai
   clientServerStatusCodesAsErrors: false
+  enumFormat: enum
   flattenGlobalSecurity: true
   imports:
     option: openapi

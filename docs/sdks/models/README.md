@@ -18,15 +18,15 @@ List available LLM models
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 768578,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 768578,
+});
 
+async function run() {
   const organizationId = 99895;
   
-  const result = await sdk.models.list(organizationId);
+  const result = await writer.models.list(organizationId);
 
   // Handle the result
   console.log(result)

@@ -44,13 +44,13 @@ If you cannot see your secret API keys in the Dashboard, this means you do not h
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-    const sdk = new Writer({
-        apiKey: "<YOUR_API_KEY_HERE>",
-        organizationId: 850421,
-    });
+const writer = new Writer({
+    apiKey: "<YOUR_API_KEY_HERE>",
+    organizationId: 850421,
+});
 
-    const result = await sdk.billing.getSubscriptionDetails();
+async function run() {
+    const result = await writer.billing.getSubscriptionDetails();
 
     // Handle the result
     console.log(result);
@@ -165,18 +165,18 @@ The following global parameter is available. The required parameter must be set 
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-    const sdk = new Writer({
-        apiKey: "<YOUR_API_KEY_HERE>",
-        organizationId: 496531,
-    });
+const writer = new Writer({
+    apiKey: "<YOUR_API_KEY_HERE>",
+    organizationId: 496531,
+});
 
+async function run() {
     const contentDetectorRequest = {
         input: "<value>",
     };
     const organizationId = 592237;
 
-    const result = await sdk.aiContentDetector.detect(contentDetectorRequest, organizationId);
+    const result = await writer.aiContentDetector.detect(contentDetectorRequest, organizationId);
 
     // Handle the result
     console.log(result);
@@ -206,15 +206,15 @@ Validation errors can also occur when either method arguments or data returned f
 import { Writer } from "@writerai/writer-sdk";
 import * as errors from "@writerai/writer-sdk/sdk/models/errors";
 
-async function run() {
-    const sdk = new Writer({
-        apiKey: "<YOUR_API_KEY_HERE>",
-        organizationId: 850421,
-    });
+const writer = new Writer({
+    apiKey: "<YOUR_API_KEY_HERE>",
+    organizationId: 850421,
+});
 
+async function run() {
     let result;
     try {
-        result = await sdk.billing.getSubscriptionDetails();
+        result = await writer.billing.getSubscriptionDetails();
     } catch (err) {
         switch (true) {
             case err instanceof errors.SDKValidationError: {
@@ -259,14 +259,14 @@ You can override the default server globally by passing a server index to the `s
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-    const sdk = new Writer({
-        serverIdx: 0,
-        apiKey: "<YOUR_API_KEY_HERE>",
-        organizationId: 850421,
-    });
+const writer = new Writer({
+    serverIdx: 0,
+    apiKey: "<YOUR_API_KEY_HERE>",
+    organizationId: 850421,
+});
 
-    const result = await sdk.billing.getSubscriptionDetails();
+async function run() {
+    const result = await writer.billing.getSubscriptionDetails();
 
     // Handle the result
     console.log(result);
@@ -284,14 +284,14 @@ The default server can also be overridden globally by passing a URL to the `serv
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-    const sdk = new Writer({
-        serverURL: "https://enterprise-api.writer.com",
-        apiKey: "<YOUR_API_KEY_HERE>",
-        organizationId: 850421,
-    });
+const writer = new Writer({
+    serverURL: "https://enterprise-api.writer.com",
+    apiKey: "<YOUR_API_KEY_HERE>",
+    organizationId: 850421,
+});
 
-    const result = await sdk.billing.getSubscriptionDetails();
+async function run() {
+    const result = await writer.billing.getSubscriptionDetails();
 
     // Handle the result
     console.log(result);
@@ -370,13 +370,13 @@ To authenticate with the API the `apiKey` parameter must be set when initializin
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-    const sdk = new Writer({
-        apiKey: "<YOUR_API_KEY_HERE>",
-        organizationId: 850421,
-    });
+const writer = new Writer({
+    apiKey: "<YOUR_API_KEY_HERE>",
+    organizationId: 850421,
+});
 
-    const result = await sdk.billing.getSubscriptionDetails();
+async function run() {
+    const result = await writer.billing.getSubscriptionDetails();
 
     // Handle the result
     console.log(result);
@@ -405,18 +405,18 @@ Certain SDK methods accept files as part of a multi-part request. It is possible
 import { Writer } from "@writerai/writer-sdk";
 import { openAsBlob } from "node:fs";
 
-async function run() {
-    const sdk = new Writer({
-        apiKey: "<YOUR_API_KEY_HERE>",
-        organizationId: 403654,
-    });
+const writer = new Writer({
+    apiKey: "<YOUR_API_KEY_HERE>",
+    organizationId: 403654,
+});
 
+async function run() {
     const uploadModelFileRequest = {
         file: await openAsBlob("./sample-file"),
     };
     const organizationId = 330343;
 
-    const result = await sdk.files.upload(uploadModelFileRequest, organizationId);
+    const result = await writer.files.upload(uploadModelFileRequest, organizationId);
 
     // Handle the result
     console.log(result);

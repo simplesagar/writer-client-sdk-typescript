@@ -46,10 +46,10 @@ export type FindSnippetsResponse = {
 };
 
 /** @internal */
-export const SortField$ = z.nativeEnum(SortField);
+export const SortField$: z.ZodNativeEnum<typeof SortField> = z.nativeEnum(SortField);
 
 /** @internal */
-export const SortOrder$ = z.nativeEnum(SortOrder);
+export const SortOrder$: z.ZodNativeEnum<typeof SortOrder> = z.nativeEnum(SortOrder);
 
 /** @internal */
 export namespace FindSnippetsRequest$ {

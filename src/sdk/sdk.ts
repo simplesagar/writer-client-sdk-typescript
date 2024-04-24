@@ -49,72 +49,72 @@ export class Writer extends ClientSDK {
     }
 
     private _billing?: Billing;
-    get billing() {
+    get billing(): Billing {
         return (this._billing ??= new Billing(this.options$));
     }
 
     private _aiContentDetector?: AIContentDetector;
-    get aiContentDetector() {
+    get aiContentDetector(): AIContentDetector {
         return (this._aiContentDetector ??= new AIContentDetector(this.options$));
     }
 
     private _content?: Content;
-    get content() {
+    get content(): Content {
         return (this._content ??= new Content(this.options$));
     }
 
     private _coWrite?: CoWrite;
-    get coWrite() {
+    get coWrite(): CoWrite {
         return (this._coWrite ??= new CoWrite(this.options$));
     }
 
     private _files?: Files;
-    get files() {
+    get files(): Files {
         return (this._files ??= new Files(this.options$));
     }
 
     private _models?: Models;
-    get models() {
+    get models(): Models {
         return (this._models ??= new Models(this.options$));
     }
 
     private _completions?: Completions;
-    get completions() {
+    get completions(): Completions {
         return (this._completions ??= new Completions(this.options$));
     }
 
     private _modelCustomization?: ModelCustomization;
-    get modelCustomization() {
+    get modelCustomization(): ModelCustomization {
         return (this._modelCustomization ??= new ModelCustomization(this.options$));
     }
 
     private _downloadTheCustomizedModel?: DownloadTheCustomizedModel;
-    get downloadTheCustomizedModel() {
+    get downloadTheCustomizedModel(): DownloadTheCustomizedModel {
         return (this._downloadTheCustomizedModel ??= new DownloadTheCustomizedModel(this.options$));
     }
 
     private _document?: Document;
-    get document() {
+    get document(): Document {
         return (this._document ??= new Document(this.options$));
     }
 
     private _snippet?: Snippet;
-    get snippet() {
+    get snippet(): Snippet {
         return (this._snippet ??= new Snippet(this.options$));
     }
 
     private _styleguide?: Styleguide;
-    get styleguide() {
+    get styleguide(): Styleguide {
         return (this._styleguide ??= new Styleguide(this.options$));
     }
 
     private _terminology?: Terminology;
-    get terminology() {
+    get terminology(): Terminology {
         return (this._terminology ??= new Terminology(this.options$));
     }
 
     private _user?: User;
-    get user() {
+    get user(): User {
         return (this._user ??= new User(this.options$));
     }
 }

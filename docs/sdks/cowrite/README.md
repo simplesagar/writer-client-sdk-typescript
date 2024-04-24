@@ -19,12 +19,12 @@ Generate content using predefined templates
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 569932,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 569932,
+});
 
+async function run() {
   const generateTemplateRequest = {
     inputs: [
       {
@@ -39,7 +39,7 @@ async function run() {
   const teamId = 888452;
   const organizationId = 926220;
   
-  const result = await sdk.coWrite.generateContent(generateTemplateRequest, teamId, organizationId);
+  const result = await writer.coWrite.generateContent(generateTemplateRequest, teamId, organizationId);
 
   // Handle the result
   console.log(result)
@@ -78,17 +78,17 @@ Get a list of your existing CoWrite templates
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 380445,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 380445,
+});
 
+async function run() {
   const teamId = 882866;
   const templateId = "<value>";
   const organizationId = 55511;
   
-  const result = await sdk.coWrite.listTemplates(teamId, templateId, organizationId);
+  const result = await writer.coWrite.listTemplates(teamId, templateId, organizationId);
 
   // Handle the result
   console.log(result)

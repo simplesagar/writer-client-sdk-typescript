@@ -19,12 +19,12 @@ Check your content against your preset styleguide.
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 935464,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 935464,
+});
 
+async function run() {
   const contentRequest = {
     content: "<value>",
     settings: {
@@ -49,7 +49,7 @@ async function run() {
   const teamId = 38270;
   const organizationId = 919579;
   
-  const result = await sdk.content.check(contentRequest, teamId, organizationId);
+  const result = await writer.content.check(contentRequest, teamId, organizationId);
 
   // Handle the result
   console.log(result)
@@ -88,12 +88,12 @@ Apply the style guide suggestions directly to your content.
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 501355,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 501355,
+});
 
+async function run() {
   const contentRequest = {
     content: "<value>",
     settings: {
@@ -119,7 +119,7 @@ async function run() {
   const xRequestID = "<value>";
   const organizationId = 383223;
   
-  const result = await sdk.content.correct(contentRequest, teamId, xRequestID, organizationId);
+  const result = await writer.content.correct(contentRequest, teamId, xRequestID, organizationId);
 
   // Handle the result
   console.log(result)

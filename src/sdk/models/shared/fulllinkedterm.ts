@@ -23,7 +23,7 @@ export type FullLinkedTerm = {
 };
 
 /** @internal */
-export const Pos$ = z.nativeEnum(Pos);
+export const Pos$: z.ZodNativeEnum<typeof Pos> = z.nativeEnum(Pos);
 
 /** @internal */
 export namespace FullLinkedTerm$ {

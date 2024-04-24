@@ -19,15 +19,15 @@ Page details
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 700347,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 700347,
+});
 
+async function run() {
   const pageId = 90065;
   
-  const result = await sdk.styleguide.get(pageId);
+  const result = await writer.styleguide.get(pageId);
 
   // Handle the result
   console.log(result)
@@ -65,17 +65,17 @@ List your styleguide pages
 import { Writer } from "@writerai/writer-sdk";
 import { Status } from "@writerai/writer-sdk/sdk/models/operations";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 763372,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 763372,
+});
 
+async function run() {
   const limit = 760116;
   const offset = 303332;
   const status = Status.Live;
   
-  const result = await sdk.styleguide.listPages(limit, offset, status);
+  const result = await writer.styleguide.listPages(limit, offset, status);
 
   // Handle the result
   console.log(result)

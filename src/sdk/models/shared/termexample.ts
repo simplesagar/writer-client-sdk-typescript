@@ -18,7 +18,8 @@ export type TermExample = {
 };
 
 /** @internal */
-export const TermExampleType$ = z.nativeEnum(TermExampleType);
+export const TermExampleType$: z.ZodNativeEnum<typeof TermExampleType> =
+    z.nativeEnum(TermExampleType);
 
 /** @internal */
 export namespace TermExample$ {

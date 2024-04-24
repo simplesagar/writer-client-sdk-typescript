@@ -45,10 +45,11 @@ export type FullTermWithUser = {
 };
 
 /** @internal */
-export const FullTermWithUserPos$ = z.nativeEnum(FullTermWithUserPos);
+export const FullTermWithUserPos$: z.ZodNativeEnum<typeof FullTermWithUserPos> =
+    z.nativeEnum(FullTermWithUserPos);
 
 /** @internal */
-export const Type$ = z.nativeEnum(Type);
+export const Type$: z.ZodNativeEnum<typeof Type> = z.nativeEnum(Type);
 
 /** @internal */
 export namespace FullTermWithUser$ {
