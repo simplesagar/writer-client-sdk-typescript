@@ -19,17 +19,17 @@ Get document details
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 700347,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 700347,
+});
 
+async function run() {
   const documentId = 90065;
   const teamId = 558834;
   const organizationId = 844199;
   
-  const result = await sdk.document.get(documentId, teamId, organizationId);
+  const result = await writer.document.get(documentId, teamId, organizationId);
 
   // Handle the result
   console.log(result)
@@ -68,13 +68,13 @@ List team documents
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 768578,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 768578,
+});
 
-  const result = await sdk.document.list({
+async function run() {
+  const result = await writer.document.list({
     teamId: 99895,
   });
 

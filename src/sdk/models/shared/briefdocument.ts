@@ -25,7 +25,7 @@ export type BriefDocument = {
 };
 
 /** @internal */
-export const Access$ = z.nativeEnum(Access);
+export const Access$: z.ZodNativeEnum<typeof Access> = z.nativeEnum(Access);
 
 /** @internal */
 export namespace BriefDocument$ {

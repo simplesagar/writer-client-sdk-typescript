@@ -41,10 +41,10 @@ export type TermCreate = {
 };
 
 /** @internal */
-export const TermCreatePos$ = z.nativeEnum(TermCreatePos);
+export const TermCreatePos$: z.ZodNativeEnum<typeof TermCreatePos> = z.nativeEnum(TermCreatePos);
 
 /** @internal */
-export const TermCreateType$ = z.nativeEnum(TermCreateType);
+export const TermCreateType$: z.ZodNativeEnum<typeof TermCreateType> = z.nativeEnum(TermCreateType);
 
 /** @internal */
 export namespace TermCreate$ {

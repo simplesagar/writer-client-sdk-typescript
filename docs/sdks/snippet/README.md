@@ -20,12 +20,12 @@ Delete snippets
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 545907,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 545907,
+});
 
+async function run() {
   const teamId = 841399;
   const xRequestID = "<value>";
   const ids = [
@@ -33,7 +33,7 @@ async function run() {
   ];
   const organizationId = 698486;
   
-  const result = await sdk.snippet.delete(teamId, xRequestID, ids, organizationId);
+  const result = await writer.snippet.delete(teamId, xRequestID, ids, organizationId);
 
   // Handle the result
   console.log(result)
@@ -73,13 +73,13 @@ Find snippets
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 40141,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 40141,
+});
 
-  const result = await sdk.snippet.find({
+async function run() {
+  const result = await writer.snippet.find({
     shortcuts: [
       "<value>",
     ],
@@ -124,12 +124,12 @@ Update snippets
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 857478,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 857478,
+});
 
+async function run() {
   const teamId = 24555;
   const requestBody = [
     {
@@ -145,7 +145,7 @@ async function run() {
   const xRequestID = "<value>";
   const organizationId = 597129;
   
-  const result = await sdk.snippet.update(teamId, requestBody, xRequestID, organizationId);
+  const result = await writer.snippet.update(teamId, requestBody, xRequestID, organizationId);
 
   // Handle the result
   console.log(result)

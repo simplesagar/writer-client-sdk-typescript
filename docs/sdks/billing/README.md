@@ -18,13 +18,13 @@ Get your organization subscription details
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 850421,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 850421,
+});
 
-  const result = await sdk.billing.getSubscriptionDetails();
+async function run() {
+  const result = await writer.billing.getSubscriptionDetails();
 
   // Handle the result
   console.log(result)

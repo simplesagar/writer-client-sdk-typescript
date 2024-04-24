@@ -46,10 +46,12 @@ export type ListUsersResponse = {
 };
 
 /** @internal */
-export const ListUsersQueryParamSortField$ = z.nativeEnum(ListUsersQueryParamSortField);
+export const ListUsersQueryParamSortField$: z.ZodNativeEnum<typeof ListUsersQueryParamSortField> =
+    z.nativeEnum(ListUsersQueryParamSortField);
 
 /** @internal */
-export const ListUsersQueryParamSortOrder$ = z.nativeEnum(ListUsersQueryParamSortOrder);
+export const ListUsersQueryParamSortOrder$: z.ZodNativeEnum<typeof ListUsersQueryParamSortOrder> =
+    z.nativeEnum(ListUsersQueryParamSortOrder);
 
 /** @internal */
 export namespace ListUsersRequest$ {

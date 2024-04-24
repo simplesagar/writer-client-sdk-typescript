@@ -1,7 +1,7 @@
 {
   "name": "@writerai/writer-sdk",
-  "version": "3.4.2",
-  "author": "writerai",
+  "version": "3.5.0",
+  "author": "writerai",  
   "main": "./index.js",
   "sideEffects": false,
   "repository": {
@@ -14,7 +14,6 @@
     "build": "tsc",
     "prepare": "npm run build"
   },
-  "keywords": [],
   "peerDependencies": {
     "zod": ">= 3"
   },

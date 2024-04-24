@@ -54,7 +54,7 @@ export type ContentIssue = {
 };
 
 /** @internal */
-export const Service$ = z.nativeEnum(Service);
+export const Service$: z.ZodNativeEnum<typeof Service> = z.nativeEnum(Service);
 
 /** @internal */
 export namespace ContentIssue$ {

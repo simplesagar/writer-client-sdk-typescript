@@ -25,7 +25,8 @@ export type PageWithSectionResponse = {
 };
 
 /** @internal */
-export const PageWithSectionResponseStatus$ = z.nativeEnum(PageWithSectionResponseStatus);
+export const PageWithSectionResponseStatus$: z.ZodNativeEnum<typeof PageWithSectionResponseStatus> =
+    z.nativeEnum(PageWithSectionResponseStatus);
 
 /** @internal */
 export namespace PageWithSectionResponse$ {

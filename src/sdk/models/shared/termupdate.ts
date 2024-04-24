@@ -41,10 +41,10 @@ export type TermUpdate = {
 };
 
 /** @internal */
-export const TermUpdatePos$ = z.nativeEnum(TermUpdatePos);
+export const TermUpdatePos$: z.ZodNativeEnum<typeof TermUpdatePos> = z.nativeEnum(TermUpdatePos);
 
 /** @internal */
-export const TermUpdateType$ = z.nativeEnum(TermUpdateType);
+export const TermUpdateType$: z.ZodNativeEnum<typeof TermUpdateType> = z.nativeEnum(TermUpdateType);
 
 /** @internal */
 export namespace TermUpdate$ {

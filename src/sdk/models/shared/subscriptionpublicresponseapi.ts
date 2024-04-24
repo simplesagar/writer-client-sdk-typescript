@@ -35,12 +35,12 @@ export type SubscriptionPublicResponseApi = {
 };
 
 /** @internal */
-export const ProductName$ = z.nativeEnum(ProductName);
+export const ProductName$: z.ZodNativeEnum<typeof ProductName> = z.nativeEnum(ProductName);
 
 /** @internal */
-export const SubscriptionPublicResponseApiStatus$ = z.nativeEnum(
-    SubscriptionPublicResponseApiStatus
-);
+export const SubscriptionPublicResponseApiStatus$: z.ZodNativeEnum<
+    typeof SubscriptionPublicResponseApiStatus
+> = z.nativeEnum(SubscriptionPublicResponseApiStatus);
 
 /** @internal */
 export namespace SubscriptionPublicResponseApi$ {

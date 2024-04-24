@@ -16,7 +16,9 @@ export type GenerationModelInfoResponse = {
 };
 
 /** @internal */
-export const GenerationModelInfoResponseType$ = z.nativeEnum(GenerationModelInfoResponseType);
+export const GenerationModelInfoResponseType$: z.ZodNativeEnum<
+    typeof GenerationModelInfoResponseType
+> = z.nativeEnum(GenerationModelInfoResponseType);
 
 /** @internal */
 export namespace GenerationModelInfoResponse$ {

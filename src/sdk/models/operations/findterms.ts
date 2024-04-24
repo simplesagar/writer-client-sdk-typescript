@@ -61,16 +61,18 @@ export type FindTermsResponse = {
 };
 
 /** @internal */
-export const PartOfSpeech$ = z.nativeEnum(PartOfSpeech);
+export const PartOfSpeech$: z.ZodNativeEnum<typeof PartOfSpeech> = z.nativeEnum(PartOfSpeech);
 
 /** @internal */
-export const QueryParamSortField$ = z.nativeEnum(QueryParamSortField);
+export const QueryParamSortField$: z.ZodNativeEnum<typeof QueryParamSortField> =
+    z.nativeEnum(QueryParamSortField);
 
 /** @internal */
-export const QueryParamSortOrder$ = z.nativeEnum(QueryParamSortOrder);
+export const QueryParamSortOrder$: z.ZodNativeEnum<typeof QueryParamSortOrder> =
+    z.nativeEnum(QueryParamSortOrder);
 
 /** @internal */
-export const Type$ = z.nativeEnum(Type);
+export const Type$: z.ZodNativeEnum<typeof Type> = z.nativeEnum(Type);
 
 /** @internal */
 export namespace FindTermsRequest$ {

@@ -18,13 +18,13 @@ List users
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 768578,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 768578,
+});
 
-  const result = await sdk.user.list({});
+async function run() {
+  const result = await writer.user.list({});
 
   // Handle the result
   console.log(result)

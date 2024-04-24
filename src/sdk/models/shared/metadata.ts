@@ -23,7 +23,7 @@ export type MetaData = {
 };
 
 /** @internal */
-export const Tier$ = z.nativeEnum(Tier);
+export const Tier$: z.ZodNativeEnum<typeof Tier> = z.nativeEnum(Tier);
 
 /** @internal */
 export namespace MetaData$ {

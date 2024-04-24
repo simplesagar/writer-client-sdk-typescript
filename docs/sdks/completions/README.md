@@ -19,12 +19,12 @@ Create completion for LLM model
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 486589,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 486589,
+});
 
+async function run() {
   const completionRequest = {
     bestOf: 1,
     maxTokens: 1024,
@@ -41,7 +41,7 @@ async function run() {
   const modelId = "<value>";
   const organizationId = 489382;
   
-  const result = await sdk.completions.create(completionRequest, modelId, organizationId);
+  const result = await writer.completions.create(completionRequest, modelId, organizationId);
 
   // Handle the result
   console.log(result)
@@ -80,12 +80,12 @@ Create completion for LLM customization model
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 919503,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 919503,
+});
 
+async function run() {
   const completionRequest = {
     bestOf: 1,
     maxTokens: 1024,
@@ -103,7 +103,7 @@ async function run() {
   const modelId = "<value>";
   const organizationId = 41297;
   
-  const result = await sdk.completions.createModelCustomizationCompletion(completionRequest, customizationId, modelId, organizationId);
+  const result = await writer.completions.createModelCustomizationCompletion(completionRequest, customizationId, modelId, organizationId);
 
   // Handle the result
   console.log(result)

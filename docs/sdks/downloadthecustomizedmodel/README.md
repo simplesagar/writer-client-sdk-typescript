@@ -18,17 +18,17 @@ Download your fine-tuned model (available only for Palmyra Base and Palmyra Larg
 ```typescript
 import { Writer } from "@writerai/writer-sdk";
 
-async function run() {
-  const sdk = new Writer({
-    apiKey: "<YOUR_API_KEY_HERE>",
-    organizationId: 501762,
-  });
+const writer = new Writer({
+  apiKey: "<YOUR_API_KEY_HERE>",
+  organizationId: 501762,
+});
 
+async function run() {
   const customizationId = "<value>";
   const modelId = "<value>";
   const organizationId = 948692;
   
-  const result = await sdk.downloadTheCustomizedModel.fetchFile(customizationId, modelId, organizationId);
+  const result = await writer.downloadTheCustomizedModel.fetchFile(customizationId, modelId, organizationId);
 
   // Handle the result
   console.log(result)
